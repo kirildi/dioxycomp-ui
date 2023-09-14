@@ -11,12 +11,17 @@ env:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build
-      run: cargo build --verbose
-    - name: Run tests
+    - name: Build Headless
+      working-directory: ./dioxycomp-headless
+      run: cargo build --verbose 
+      
+    # - name: Build Example/Demo
+    #   working-directory: examples/demo
+    #   run: cargo build --verbose
+    - name: Run Tests on Headless
+      working-directory: ./dioxycomp-headless
       run: cargo test --verbose
