@@ -2,7 +2,9 @@
 use dioxus::prelude::*;
 use dioxus_fullstack::prelude::*;
 
-use dioxycomp_headless::components::SimpleButton::SimpleButton;
+pub mod components;
+use components::*;
+pub mod pages;
 
 fn main() {
     LaunchBuilder::new(app).launch();
@@ -12,6 +14,7 @@ fn app(cx: Scope) -> Element {
     // let mut count = use_state(cx, || 0);
 
     cx.render(rsx! {
-     SimpleButton {}
+        Header::Header {}
+        Main::Main {}
     })
 }
