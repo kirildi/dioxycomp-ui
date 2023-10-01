@@ -6,7 +6,7 @@ use crate::pages;
 pub fn Main(cx: Scope) -> Element {
     cx.render(rsx! {
             main {
-            class: "",
+            class: "w-full relative",
             pages::Home::Home {}
         }
     })

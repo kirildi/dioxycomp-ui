@@ -24,7 +24,7 @@ title = "ddioxus | ⛺"
 reload_html = true
 
 # which files or dirs will be watcher monitoring
-watch_path = ["src", "public"]
+watch_path = ["src", "public/css"]
 
 # uncomment line below if using Router
 # index_on_404 = true

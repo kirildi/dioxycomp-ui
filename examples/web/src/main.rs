@@ -14,7 +14,10 @@ fn app(cx: Scope) -> Element {
     // let mut count = use_state(cx, || 0);
 
     cx.render(rsx! {
+        div{
+            class:"bg-gray-800",
         Header::Header {}
         Main::Main {}
+    }
     })
 }
