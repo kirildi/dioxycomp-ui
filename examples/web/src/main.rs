@@ -2,8 +2,8 @@
 use dioxus::prelude::*;
 use dioxus_fullstack::prelude::*;
 
-pub mod components;
-use components::*;
+pub mod common_components;
+use common_components::*;
 pub mod pages;
 
 fn main() {
@@ -16,8 +16,8 @@ fn app(cx: Scope) -> Element {
     cx.render(rsx! {
         div{
             class:"bg-gray-800",
-        Header::Header {}
-        Main::Main {}
-    }
+            Header::Header {}
+            Main::Main {}
+        }
     })
 }
