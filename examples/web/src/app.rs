@@ -4,7 +4,7 @@ use dioxus_fullstack::prelude::*;
 use dioxus_router::prelude::*;
 
 pub mod components;
-use components::*;
+use crate::router::PageRouter::Route;
 
 pub fn App(cx: Scope) -> Element {
     // let mut count = use_state(cx, || 0);
@@ -12,9 +12,7 @@ pub fn App(cx: Scope) -> Element {
     cx.render(rsx! {
         div{
             class:"bg-gray-800",
-            Header::Header {},
-            Main::Main {},
-            //Outlet::<PageRouter::Route> { }
+            Router::<Route> {}
         }
     })
 }
