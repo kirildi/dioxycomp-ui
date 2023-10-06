@@ -4,6 +4,7 @@ use dioxus_fullstack::prelude::*;
 
 pub mod app;
 pub mod pages;
+pub mod router;
 use app::*;
 
 fn main() {

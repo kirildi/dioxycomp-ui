@@ -1,9 +1,12 @@
 #![allow(non_snake_case)]
 
 use super::Nav::Nav;
+use crate::router::PageRouter::Route;
 
 use dioxus::prelude::*;
+use dioxus_router::prelude::*;
 
+#[inline_props]
 pub fn Header(cx: Scope) -> Element {
     cx.render(rsx! {
         header{
@@ -12,7 +15,8 @@ pub fn Header(cx: Scope) -> Element {
                 class: "ml-0"
                 //TODO Convert to LOGO component
             },
-            Nav {}
-        }
+            Nav {},
+        },
+        Outlet::<Route> {}
     })
 }
