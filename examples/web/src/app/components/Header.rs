@@ -10,9 +10,9 @@ use dioxus_router::prelude::*;
 pub fn Header(cx: Scope) -> Element {
     cx.render(rsx! {
         header{
-            class: "container flex h-24 content-between bg-neutral-800",
+            class: "flex h-24 justify-between bg-neutral-800",
             div {
-                class: "ml-0"
+                class: "ml-0 order-first"
                 //TODO Convert to LOGO component
             },
             Nav {},
