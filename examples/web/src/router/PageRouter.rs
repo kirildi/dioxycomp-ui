@@ -5,6 +5,7 @@ use dioxus_router::prelude::*;
 
 use crate::app::components::Header::Header;
 use crate::app::components::Main::Main;
+use crate::pages::headless::components::Button::Button;
 use crate::pages::headless::HeadlessPage::HeadlessPage;
 
 #[derive(Routable, Clone)]
@@ -13,6 +14,10 @@ pub enum Route {
     #[layout(Header)]
         #[route("/")]
         Main {},
-        #[route("/headless")]
-        HeadlessPage {}
+        #[nest("/headless")]
+            #[layout(HeadlessPage)]                
+                #[route("/:name")]
+                Button { name: String },
+                
+            
 }

@@ -1,10 +1,9 @@
 #![allow(non_snake_case)]
+use dioxus::prelude::*;
+use dioxus_router::prelude::*;
 
 use super::Nav::Nav;
 use crate::router::PageRouter::Route;
-
-use dioxus::prelude::*;
-use dioxus_router::prelude::*;
 
 #[inline_props]
 pub fn Header(cx: Scope) -> Element {
