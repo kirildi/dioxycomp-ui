@@ -3261,17 +3261,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ca6ad05a4870b2bf5fe995117d3728437bd27d7cd5f06f13c17443ef369775a1"
 
 [[package]]
-name = "web"
-version = "0.1.0"
-dependencies = [
- "dioxus",
- "dioxus-fullstack",
- "dioxus-router",
- "dioxycomp-headless",
- "serde",
-]
-
-[[package]]
 name = "web-sys"
 version = "0.3.64"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3279,6 +3268,17 @@ checksum = "9b85cbef8c220a6abc02aefd892dfc0fc23afb1c6a426316ec33253a3877249b"
 dependencies = [
  "js-sys",
  "wasm-bindgen",
+]
+
+[[package]]
+name = "webdemo"
+version = "0.1.0"
+dependencies = [
+ "dioxus",
+ "dioxus-fullstack",
+ "dioxus-router",
+ "dioxycomp-headless",
+ "serde",
 ]
 
 [[package]]
