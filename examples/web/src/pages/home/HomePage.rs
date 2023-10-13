@@ -12,7 +12,7 @@ pub fn HomePage(cx: Scope) -> Element {
             },
             h2 {
                 class: "text-2xl lg:text-3xl text-center leading-loose",
-                "Headless UI component library for the ",
+                "An UI component library for the ",
                 a {
                     class: "text-blue-300",
                     href: "https://dioxuslabs.com/",
