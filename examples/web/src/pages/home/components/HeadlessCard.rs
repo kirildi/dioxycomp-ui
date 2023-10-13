@@ -5,7 +5,7 @@ pub fn HeadlessCard(cx: Scope) -> Element {
     cx.render(rsx! {
         // Card container
         div {
-            class: "relative w-96 h-[24em] mx-auto rounded-2xl bg-gray-800 border-2 border-gray-300 border-solid shadow-md shadow-indigo-500 hover:shadow-lg hover:shadow-indigo-500",
+            class: "relative w-96 h-[24em] mx-auto rounded-2xl bg-gray-800 border-2 border-gray-300 border-solid cursor-pointer shadow-[0_0_2rem_0.3rem_rgba(99,102,241,0.6)] hover:shadow-[0_0_4em_0.6em_rgba(99,102,241,0.9)]",
             // Card main content
             div {
                 class: "h-64 p-4 border-b-2 border-gray-300 text-center",
