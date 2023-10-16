@@ -18,3 +18,5 @@ target/
 # Misc
 **/dist
 dist/
+**/docs
+docs
