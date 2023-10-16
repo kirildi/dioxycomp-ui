@@ -16,6 +16,6 @@ pub fn Header(cx: Scope) -> Element {
             },
             Nav {},
         },
-        Outlet::<Route> {}
+
     })
 }

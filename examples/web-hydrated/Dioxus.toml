@@ -17,7 +17,7 @@ asset_dir = "public/css"
 
 # HTML title tag content
 title = "TailwindDioxus"
-base_path="/"
+base_path="."
 
 [web.watcher]
 

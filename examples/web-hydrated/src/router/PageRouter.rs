@@ -4,15 +4,15 @@ use dioxus::prelude::*;
 use dioxus_router::prelude::*;
 use serde::{Deserialize, Serialize};
 
-use crate::app::components::Header::Header;
 use crate::app::components::Main::Main;
+use crate::app::App;
 use crate::pages::headless::components::Button::Button;
 use crate::pages::headless::HeadlessPage::HeadlessPage;
 
 #[derive(Clone, Routable, Debug, PartialEq, Serialize, Deserialize)]
 #[rustfmt::skip]
 pub enum Route {
-    #[layout(Header)]
+    #[layout(App)]
         #[route("/")]
         Main {},
         #[nest("/headless")]
