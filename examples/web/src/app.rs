@@ -12,7 +12,9 @@ pub fn App(cx: Scope) -> Element {
     cx.render(rsx! {
         div{
             class:"bg-gray-800",
-            Router::<Route> {}
+                    Router::<Route> {
+            config: || RouterConfig::default().history(WebHistory::default())
+        }
         }
     })
 }
