@@ -9,7 +9,12 @@
 use dioxus::prelude::*;
 use dioxus_fullstack::{launch, prelude::*};
 use dioxus_router::prelude::*;
-use serde::{Deserialize, Serialize};
+
+pub mod app;
+pub mod pages;
+pub mod router;
+
+use router::PageRouter::Route;
 
 // Generate all routes and output them to the docs path
 #[cfg(feature = "ssr")]
@@ -40,45 +45,3 @@ fn main() {
 
 #[cfg(not(any(feature = "web", feature = "ssr")))]
 fn main() {}
-
-#[derive(Clone, Routable, Debug, PartialEq, Serialize, Deserialize)]
-enum Route {
-    #[route("/")]
-    Home {},
-    #[route("/blog")]
-    Blog,
-}
-
-fn Blog(cx: Scope) -> Element {
-    render! {
-        Link { to: Route::Home {}, "Go to counter" }
-        table {
-            tbody {
-                for _ in 0..100 {
-                    tr {
-                        for _ in 0..100 {
-                            td { "hello world!" }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-fn Home(cx: Scope) -> Element {
-    let mut count = use_state(cx, || 0);
-    let text = use_state(cx, || "...".to_string());
-
-    cx.render(rsx! {
-        Link {
-            to: Route::Blog {},
-            "Go to blog"
-        }
-        div {
-            h1 { "High-Five counter: {count}" }
-            button { onclick: move |_| count += 1, "Up high!" }
-            button { onclick: move |_| count -= 1, "Down low!" }
-        }
-    })
-}
