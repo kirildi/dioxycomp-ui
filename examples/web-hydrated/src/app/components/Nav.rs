@@ -16,7 +16,7 @@ pub fn Nav(cx: Scope) -> Element {
             },
             Link {
                 class: "hover:px-4 hover:bg-gray-600 hover:rounded hover:duration-100",
-                to: Route::Button { name: String::from("Button") },
+                to: Route::PageLoader { name: String::from("Button") },
                 "Headless"
             },
 

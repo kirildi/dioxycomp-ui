@@ -16,7 +16,7 @@ pub fn HeadlessPage(cx: Scope) -> Element {
                 h2 {"Components"},
                 Link {
                     class: "flex-none hover:bg-gray-600 hover:rounded hover:duration-100",
-                    to: Route::Button { name: String::from("Button")},
+                    to: Route::PageLoader { name: String::from("Button")},
                     "Button"
                 },
             },

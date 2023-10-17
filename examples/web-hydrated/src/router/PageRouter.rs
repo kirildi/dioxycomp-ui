@@ -6,7 +6,8 @@ use serde::{Deserialize, Serialize};
 
 use crate::app::components::Main::Main;
 use crate::app::App;
-use crate::pages::headless::components::Button::Button;
+use crate::router::PageLoader::PageLoader;
+
 use crate::pages::headless::HeadlessPage::HeadlessPage;
 
 #[derive(Clone, Routable, Debug, PartialEq, Serialize, Deserialize)]
@@ -18,7 +19,7 @@ pub enum Route {
         #[nest("/headless")]
             #[layout(HeadlessPage)]                
                 #[route("/:name")]
-                Button { name: String },
+                PageLoader { name: String },
             #[end_layout]
         #[end_nest]
     #[end_layout]            
