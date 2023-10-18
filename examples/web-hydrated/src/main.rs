@@ -9,6 +9,7 @@
 use dioxus::prelude::*;
 use dioxus_fullstack::{launch, prelude::*};
 use dioxus_router::prelude::*;
+use dioxycomp_headless::components::*;
 
 pub mod app;
 pub mod pages;
