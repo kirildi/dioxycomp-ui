@@ -3,13 +3,22 @@
 use dioxus::prelude::*;
 use dioxus_router::prelude::*;
 
-use crate::pages::headless::components::Button::Button;
+use crate::pages::headless::components::ButtonPage::ButtonPage;
+use crate::pages::headless::components::CheckboxPage::CheckboxPage;
 
 #[inline_props]
 pub fn PageLoader(cx: Scope, name: String) -> Element {
-    match name {
-        Button => cx.render(rsx! {
-            self::Button { name: String::from("Button")}
+    match name.as_str() {
+        "Button" => cx.render(rsx! {
+            p { "{name}"},
+            ButtonPage { name: String::from("Button")}
+        }),
+        "Checkbox" => cx.render(rsx! {
+            p { "{name}"},
+            CheckboxPage { name: String::from("Checkbox")}
+        }),
+        _ => cx.render(rsx! {
+            p { "no page to render" }
         }),
     }
 }

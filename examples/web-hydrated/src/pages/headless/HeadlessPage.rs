@@ -19,6 +19,11 @@ pub fn HeadlessPage(cx: Scope) -> Element {
                     to: Route::PageLoader { name: String::from("Button")},
                     "Button"
                 },
+                Link {
+                    class: "flex-none hover:bg-gray-600 hover:rounded hover:duration-100",
+                    to: Route::PageLoader { name: String::from("Checkbox")},
+                    "Checkbox"
+                },
             },
             main {
                 class: "grow relative p-4 h-auto text-xl lg:ml-72 lg:w-full lg:h-full leading-normal",
