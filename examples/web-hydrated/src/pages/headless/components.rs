@@ -2,3 +2,4 @@
 pub mod ButtonPage;
 pub mod CheckboxPage;
 pub mod RadioPage;
+pub mod SideBarNav;
