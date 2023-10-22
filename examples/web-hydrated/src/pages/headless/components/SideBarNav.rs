@@ -7,28 +7,48 @@ use crate::router::PageRouter::Route;
 
 #[inline_props]
 pub fn SideBarNav(cx: Scope) -> Element {
-    let nav_style = "fixed w-full h-2/6 lg:w-72 lg:h-full p-4 bg-zinc-900";
-    let link_style = "flex-none hover:bg-gray-600 hover:rounded hover:duration-100";
+    let nav_style = "fixed p-4 w-full h-2/6 bg-zinc-900 lg:w-72 lg:h-full";
+    let li_style = "flex-none pl-4 py-2 hover:bg-neutral-600 hover:rounded-md hover:duration-100";
     cx.render(rsx! {
-          nav {
-                id: "sidebar",
-                class: "{nav_style}",
-                h2 {"Components"},
-                Link {
-                      class: "{link_style}",
-                      to: Route::PageLoader { name: String::from("Button")},
-                      "Button"
-                },
-                Link {
-                      class: "{link_style}",
-                      to: Route::PageLoader { name: String::from("Checkbox")},
-                      "Checkbox"
-                },
-                Link {
-                      class: "{link_style}",
-                      to: Route::PageLoader { name: String::from("Radio")},
-                      "Radio"
-                },
+              nav {
+              id: "sidebar",
+              class: "{nav_style}",
+              details {
+              class: "group",
+              open: "true",
+                      summary {
+                            class: "p-3 w-64 h-12 bg-zinc-800 rounded-xl group-open:rounded-b-none font-semibold",
+                            "Components",
+                      },
+                      ul {
+                            class: "pb-3 bg-neutral-700 rounded-b-xl",
+                                    Link {
+                                        class: "",
+                                        to: Route::PageLoader { name: String::from("Button")},
+                                          li {
+                                        class: "{li_style}",
+
+                                                      "Button"
+                                                }
+                                    },
+                                     Link {
+                                        class: " ",
+                                        to: Route::PageLoader { name: String::from("Checkbox")},
+                                          li {
+                                                class: "{li_style}",
+                                                "Checkbox"
+                                          }
+                                    },
+                                    Link {
+                                        class: " ",
+                                        to: Route::PageLoader { name: String::from("Radio")},
+                                    li {
+                                          class: "{li_style}",
+                                        "Radio"
+                                          }
+                            },
+                      }
+                }
           },
     })
 }
