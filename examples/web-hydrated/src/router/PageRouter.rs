@@ -14,14 +14,14 @@ use crate::pages::headless::HeadlessPage::HeadlessPage;
 #[rustfmt::skip]
 pub enum Route {
     #[layout(App)]
-        #[route("/")]
-        Main {},
         #[nest("/headless")]
             #[layout(HeadlessPage)]                
                 #[route("/:name")]
                 PageLoader { name: String },
             #[end_layout]
         #[end_nest]
+        #[route("/")]
+        Main {},
     #[end_layout]            
     #[route("/:..route")]
     PageNotFound {
