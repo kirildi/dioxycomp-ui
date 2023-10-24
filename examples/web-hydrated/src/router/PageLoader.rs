@@ -6,6 +6,7 @@ use dioxus_router::prelude::*;
 use crate::pages::headless::components::ButtonPage::ButtonPage;
 use crate::pages::headless::components::CheckboxPage::CheckboxPage;
 use crate::pages::headless::components::RadioPage::RadioPage;
+use crate::pages::headless::components::SelectPage::SelectPage;
 
 #[inline_props]
 pub fn PageLoader(cx: Scope, name: String) -> Element {
@@ -21,6 +22,10 @@ pub fn PageLoader(cx: Scope, name: String) -> Element {
         "Radio" => cx.render(rsx! {
             p { "{name}"},
             RadioPage { name: String::from("Radio")}
+        }),
+        "Select" => cx.render(rsx! {
+            p { "{name}"},
+            SelectPage { name: String::from("Select")}
         }),
         _ => cx.render(rsx! {
             p { "no page to render" }

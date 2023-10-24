@@ -1,7 +1,7 @@
 #![allow(non_snake_case)]
 
 use dioxus::prelude::*;
-use dioxycomp_headless::components::SimpleButton::SimpleButton;
+use dioxycomp_headless::components::Button::Button;
 
 #[inline_props]
 pub fn ButtonPage(cx: Scope, name: String) -> Element {
@@ -11,7 +11,7 @@ pub fn ButtonPage(cx: Scope, name: String) -> Element {
 
         },
         p {
-            SimpleButton {}
+            Button {}
         }
 
     })

@@ -9,8 +9,8 @@ pub fn Checkbox(cx: Scope) -> Element {
     let state = use_state(&cx, || false);
 
     cx.render(rsx!(input {
-      "type": "checkbox",
-      style: "width:1em; height:1em;",
-      onclick: move |_| state.set(!state),
+        r#type: "checkbox",
+        style: "width:1em; height:1em;",
+        onclick: move |_| state.set(!state),
     }))
 }
