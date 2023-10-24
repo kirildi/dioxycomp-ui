@@ -72,7 +72,10 @@
   -->
 
 <!-- About the Project -->
-## :star2: About the Project
+## About the Project
+
+:warning: Current project state - under development (not production ready) !!!
+
 The project presents a set of libraries containing UI reusable components, which you can include and use in your [Dioxus framework](https://dioxuslabs.com) projects
  
 
@@ -132,7 +135,7 @@ The project presents a set of libraries containing UI reusable components, which
 </details>
 -->
 <!-- Features -->
-### :dart: Features
+### Features
 
 - `dioxycomp-headless` - headless ui components lib
   
@@ -278,9 +281,9 @@ Please read the [Code of Conduct](https://github.com/Louis3797/awesome-readme-te
 
 -->
 <!-- License -->
-## :warning: License
+### License
 
-Distributed under the MIT License. See LICENSE.txt for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/kirildi/dioxycomp-ui/blob/main/LICENSE) for more information.
 
 
 <!-- Contact -->
