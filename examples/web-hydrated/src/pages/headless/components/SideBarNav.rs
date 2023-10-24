@@ -9,13 +9,14 @@ use crate::router::PageRouter::Route;
 pub fn SideBarNav(cx: Scope) -> Element {
     let nav_style = "fixed p-4 w-full h-2/6 bg-zinc-900 lg:w-72 lg:h-full";
     let li_style = "flex-none pl-4 py-2 hover:bg-neutral-600 hover:rounded-md hover:duration-100";
+
     cx.render(rsx! {
-              nav {
-              id: "sidebar",
-              class: "{nav_style}",
-              details {
-              class: "group",
-              open: "true",
+      nav {
+            id: "sidebar",
+            class: "{nav_style}",
+            details {
+            class: "group",
+            open: "true",
                       summary {
                             class: "p-3 w-64 h-12 bg-zinc-800 rounded-xl group-open:rounded-b-none font-semibold",
                             "Components",
@@ -46,6 +47,14 @@ pub fn SideBarNav(cx: Scope) -> Element {
                                           class: "{li_style}",
                                         "Radio"
                                           }
+                                    },
+                                    Link {
+                                        class: " ",
+                                        to: Route::PageLoader { name: String::from("Select")},
+                                    li {
+                                          class: "{li_style}",
+                                        "Select"
+                                    }
                             },
                       }
                 }
