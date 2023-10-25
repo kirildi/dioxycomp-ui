@@ -22,7 +22,7 @@ pub fn SideBarNav(cx: Scope) -> Element {
                             "Components",
                       },
                       ul {
-                            class: "pb-3 bg-neutral-700 rounded-b-xl",
+                            class: "pb-3 bg-gray-800/20 rounded-b-xl",
                                     Link {
                                         class: "",
                                         to: Route::PageLoader { name: String::from("Button")},
