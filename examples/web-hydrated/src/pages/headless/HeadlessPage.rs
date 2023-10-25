@@ -13,7 +13,7 @@ pub fn HeadlessPage(cx: Scope) -> Element {
             class: "flex",
             SideBarNav {},
             main {
-                class: "grow relative p-4 h-auto text-xl lg:ml-72 lg:w-full lg:h-full leading-normal",
+                class: "grow relative px-24 pt-12 pb-6 text-xl lg:ml-72 lg:w-full lg:h-full leading-normal",
                 Outlet::<Route> {}
             },
         }
