@@ -22,11 +22,10 @@ pub enum Route {
         #[end_nest]
         #[route("/")]
         Main {},
-    #[end_layout]            
-    #[route("/:..route")]
-    PageNotFound {
-        route: Vec<String>,
-    },       
+        #[route("/:..route")]
+        PageNotFound {
+            route: Vec<String>,       
+        },       
 }
 
 #[inline_props]
