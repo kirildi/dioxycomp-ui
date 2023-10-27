@@ -14,9 +14,6 @@
   <a href="https://github.com/kirildi/dioxycomp-ui/graphs/contributors">
     <img src="https://img.shields.io/github/contributors/kirildi/dioxycomp-ui" alt="contributors" />
   </a>
-  <a href="">
-    <img src="https://img.shields.io/github/last-commit/kirildi/dioxycomp-ui" alt="last update" />
-  </a>
   <!--
   <a href="https://github.com/kirildi/dioxycomp-ui/network/members">
     <img src="https://img.shields.io/github/forks/kirildi/dioxycomp-ui" alt="forks" />
@@ -25,10 +22,14 @@
     <img src="https://img.shields.io/github/stars/Louis3797/awesome-readme-template" alt="stars" />
   </a>-->
   <a href="https://github.com/kirildi/dioxycomp-ui/issues/">
-    <img src="https://img.shields.io/github/issues/kirildi/dioxycomp-ui" alt="open issues" />
+    <img src="https://img.shields.io/github/issues/kirildi/dioxycomp-ui?color=%23c55020" alt="open issues" />
   </a>
   <a href="https://github.com/kirildi/dioxycomp-ui/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/kirildi/dioxycomp-ui.svg" alt="license" />
+    <img src="https://img.shields.io/github/license/kirildi/dioxycomp-ui?color=%232060c0" alt="license" />
+   
+  </a>
+  <a href="">
+   <img alt="last-commit" src="https://img.shields.io/github/last-commit/kirildi/dioxycomp-ui/main?color=lightblue">
   </a>
 </p>
    
