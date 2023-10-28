@@ -5,13 +5,13 @@
   
   <p>
    Set of ui components libs, for the
-      <a href="https://dioxuslabs.com"> Dioxus framework</a>
+      <a href="https://dioxuslabs.com" style="text-decoration: none !important;"> Dioxus framework</a>
       build with Rust language. 
   </p>
   
 <!-- Badges -->
 <p>
-  <a href="https://github.com/kirildi/dioxycomp-ui/graphs/contributors">
+  <a href="https://github.com/kirildi/dioxycomp-ui/graphs/contributors" style="text-decoration: none !important;">
     <img src="https://img.shields.io/github/contributors/kirildi/dioxycomp-ui" alt="contributors" />
   </a>
   <!--
@@ -21,14 +21,13 @@
   <a href="https://github.com/Louis3797/awesome-readme-template/stargazers">
     <img src="https://img.shields.io/github/stars/Louis3797/awesome-readme-template" alt="stars" />
   </a>-->
-  <a href="https://github.com/kirildi/dioxycomp-ui/issues/">
+  <a href="https://github.com/kirildi/dioxycomp-ui/issues/" style="text-decoration: none !important;">
     <img src="https://img.shields.io/github/issues/kirildi/dioxycomp-ui?color=%23c55020" alt="open issues" />
   </a>
-  <a href="https://github.com/kirildi/dioxycomp-ui/blob/master/LICENSE">
+  <a href="https://github.com/kirildi/dioxycomp-ui/blob/master/LICENSE" style="text-decoration: none !important;">
     <img src="https://img.shields.io/github/license/kirildi/dioxycomp-ui?color=%232060c0" alt="license" />
-   
   </a>
-  <a href="">
+  <a href="" style="text-decoration: none !important;">
    <img alt="last-commit" src="https://img.shields.io/github/last-commit/kirildi/dioxycomp-ui/main?color=lightblue">
   </a>
 </p>
