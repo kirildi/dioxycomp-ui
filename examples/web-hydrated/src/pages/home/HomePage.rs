@@ -5,7 +5,7 @@ use dioxus::prelude::*;
 pub fn HomePage(cx: Scope) -> Element {
     cx.render(rsx! {
         section {
-            class: "h-56 mx-auto pt-16 bg-gray-800",
+            class: "h-56 mx-auto pt-12 bg-gray-800",
             h1 {
                 class: "h-16 text-3xl lg:text-5xl text-center leading-normal font-bold",
                 "DIOXYCOMP"
@@ -22,7 +22,7 @@ pub fn HomePage(cx: Scope) -> Element {
             }
         },
         section {
-            class: "bg-gray-800",
+            class: "p-4 bg-gray-800",
             HeadlessCard {}
         }
     })

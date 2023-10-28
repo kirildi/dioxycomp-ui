@@ -12,7 +12,6 @@ use crate::pages::headless::components::SelectPage::SelectPage;
 pub fn PageLoader(cx: Scope, name: String) -> Element {
     match name.as_str() {
         "Button" => cx.render(rsx! {
-            p { "{name}"},
             ButtonPage { name: String::from("Button")}
         }),
         "Checkbox" => cx.render(rsx! {
