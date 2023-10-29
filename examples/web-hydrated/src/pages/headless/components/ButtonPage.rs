@@ -19,7 +19,7 @@ pub fn ButtonPage(cx: Scope, name: String) -> Element {
             p {
                 class: "text-xl",
                 "Buttons are one of the main components commonly used on a webpage.
-                They are usually constructed from a clickable area, with a textual label or an icon, and also have a fixed width and height.
+                They are usually constructed from a clickable area, with a textual label or an icon.
                 Button can also allows an action to be executed, when it is clicked or tapped (form submit, form reset, open menu etc.)."
             },
         }
