@@ -1,6 +1,6 @@
-//! # Checkbox Component
+//! # Radio Component
 //!
-//! Renders a Checkbox which can be clicked to toggle
+//! Renders a Radio component which can be clicked to mark a item from a list of single items
 
 #![allow(non_snake_case)]
 use dioxus::prelude::*;
@@ -15,6 +15,7 @@ pub fn Radio(cx: Scope) -> Element {
         onclick: move |_| state.set(!state),
       }
       label {
+        style: "padding-left: 1rem",
         r#for: "radio-n",
         "Selected"
       }
