@@ -18,7 +18,6 @@ pub fn PageLoader(cx: Scope, name: String) -> Element {
             CheckboxPage { name: String::from("Checkbox")}
         }),
         "Radio" => cx.render(rsx! {
-            p { "{name}"},
             RadioPage { name: String::from("Radio")}
         }),
         "Select" => cx.render(rsx! {
