@@ -1,6 +1,6 @@
 //! # Select Component
 //!
-//! Renders a Select component which can be clicked to select option from a list
+//! Renders a Select component which can be clicked to select option from a listbox
 
 #![allow(non_snake_case)]
 
