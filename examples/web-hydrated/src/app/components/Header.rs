@@ -9,7 +9,7 @@ use crate::router::PageRouter::Route;
 pub fn Header(cx: Scope) -> Element {
     cx.render(rsx! {
         header{
-            class: "flex h-24 justify-between bg-neutral-800",
+            class: "flex sticky w-full top-0 h-24 justify-between bg-neutral-800 z-20",
             div {
                 class: "ml-0 order-first"
                 //TODO Convert to LOGO component
