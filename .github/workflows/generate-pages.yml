@@ -20,6 +20,7 @@ jobs:
 
       - name: Build Public Pages
         working-directory: ./examples/web-hydrated
-        run: rm -rf ./docs
-          npx tailwindcss -i ./public/tailwind_input.css -o ./public/css/tailwind.css
+        run: |
+          rm -rf ./docs && \
+          npx tailwindcss -i ./public/tailwind_input.css -o ./public/css/tailwind.css && \
           dx build --features web --release
