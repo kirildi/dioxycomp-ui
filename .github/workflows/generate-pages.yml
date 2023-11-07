@@ -19,6 +19,8 @@ jobs:
         run: |
           cargo install dioxus-cli --force && \
           rustup target add wasm32-unknown-unknown && \
+          cargo update -p wasm-bindgen --precise 0.2.88 && \
+          cargo check --target wasm32-unknown-unknown && \
           npm install -D -g tailwindcss
 
       - name: Build Public Pages
