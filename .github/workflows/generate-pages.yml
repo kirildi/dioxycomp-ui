@@ -1,0 +1,25 @@
+name: Rust
+
+on:
+  push:
+    branches: ["pages"]
+  pull_request:
+    branches: ["pages"]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install deps
+        working-directory: ./web-hydrated
+        run: cargo install dioxus-cli --force
+
+      - name: Build Public Pages
+        working-directory: ./web-hydrated
+        run: rm -rf ./docs
+          npx tailwindcss -i ./public/tailwind_input.css -o ./public/css/tailwind.css
+          dx build --features web --release
