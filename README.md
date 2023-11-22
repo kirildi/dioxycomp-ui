@@ -74,11 +74,11 @@
 <!-- About the Project -->
 ## About the Project
 
-:warning: Current project state - under development (not production ready) !!!
+*Website/DEMO* - [Dioxycomp-docs](https://kirildi.github.io/dioxycomp-docs/) 
+
+:warning: The project is under development (not production ready) :warning:
 
 The project presents a set of libraries containing UI reusable components, which you can include and use in your [Dioxus framework](https://dioxuslabs.com) projects
-
-Website/DEMO - [Dioxycomp-docs](https://kirildi.github.io/dioxycomp-docs/) 
 
 <!-- Screenshots -->
 <!--### :camera: Screenshots
