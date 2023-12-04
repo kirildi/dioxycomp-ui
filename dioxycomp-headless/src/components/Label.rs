@@ -11,6 +11,7 @@ pub struct LabelProps<'a> {
     pub id: Option<&'a str>,
     pub r#for: Option<&'a str>,
     pub value: Option<&'a str>,
+    pub className: Option<&'a str>,
     pub styles: Option<&'a str>,
 }
 #[derive(Props, Clone, Default)]
@@ -23,6 +24,7 @@ pub fn Label<'a>(cx: Scope<'a, AllLabelProps<'a>>) -> Element<'a> {
         label{
             id: cx.props.label_props.id,
             r#for: cx.props.label_props.r#for,
+            class: cx. props.label_props.className,
             style: cx.props.label_props.styles,
         },
         cx.props.label_props.value
