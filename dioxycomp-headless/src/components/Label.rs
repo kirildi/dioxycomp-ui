@@ -4,7 +4,7 @@
 
 #![allow(non_snake_case)]
 #![allow(unused)]
-use dioxus::{html::label, prelude::*};
+use dioxus::prelude::*;
 
 #[derive(Props, Clone, Default)]
 pub struct LabelProps<'a> {
