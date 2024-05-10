@@ -22,7 +22,7 @@ pub fn Label(label_props: LabelProps) -> Element {
                 r#for:  label_props.r#for,
                 class:  label_props.class_name,
                 style:  label_props.styles,
-                label_props.value,
+                "{label_props.value.unwrap()}",
             },
         },
         None => rsx! { label { "" } },

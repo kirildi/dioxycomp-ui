@@ -4,7 +4,7 @@
 
 #![allow(non_snake_case)]
 #![allow(unused)]
-use dioxus::{html::button, prelude::*};
+use dioxus::prelude::*;
 
 #[derive(PartialEq, Props, Clone)]
 pub struct ButtonProps {
@@ -21,7 +21,7 @@ pub struct ButtonProps {
 pub fn Button(button_props: ButtonProps) -> Element {
     let mut state = use_signal(|| false);
     rsx! {
-        button{
+        button {
             id: button_props.id,
             autofocus:  button_props.autofocus,
             disabled:  button_props.disabled,
@@ -30,7 +30,7 @@ pub fn Button(button_props: ButtonProps) -> Element {
             value: button_props.value,
             style:  button_props.styles,
             onclick: move |_| state.toggle(),
-            button_props.label,
+            "{button_props.label.unwrap()}"
         }
     }
 }
