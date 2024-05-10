@@ -6,24 +6,28 @@
 
 use dioxus::prelude::*;
 
-pub fn Select(cx: Scope) -> Element {
-    let state = use_state(&cx, || (0, ""));
+pub fn Select() -> Element {
+    let mut selected = use_signal(|| "option 1".to_string());
+    let styles: String =
+        String::from("width: 9rem; height: 2rem; padding-left: 1rem; background-color: #404040;");
 
-    cx.render(rsx!(
+    rsx!(
       select {
-        style: "width: 9rem; height: 2rem; padding-left: 1rem; background-color: #404040;",
-        onchange: move |_| state.set((0,"option 1")),
+        style: styles,
+        value: "{selected()}",
+        prevent_default: "onchange",
+        onchange: move |event| selected.set(event.value()),
         option {
-          id: 0,
+          value: "option 2",
           "option 1"
         },
         option {
-          id: 1,
+          value: "option 2",
           "option 2"
         },
         option {
-          id: 2,
+          id: "option 3",
           "option 3"
         }
-    }))
+    })
 }

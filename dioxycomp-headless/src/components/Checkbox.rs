@@ -5,20 +5,20 @@
 #![allow(non_snake_case)]
 use dioxus::prelude::*;
 
-pub fn Checkbox(cx: Scope) -> Element {
-    let state = use_state(&cx, || false);
+pub fn Checkbox() -> Element {
+    let mut state = use_signal(|| false);
 
-    cx.render(rsx!(
+    rsx!(
         input {
             r#type: "checkbox",
             name: "checkbox",
             style: "width:1em; height:1em;",
-            onclick: move |_| state.set(!state),
+            onclick: move |_| state.toggle() ,
         },
         label{
             style: "padding-left: 1rem",
             r#for: "checkbox",
             "Check me"
         },
-    ))
+    )
 }
