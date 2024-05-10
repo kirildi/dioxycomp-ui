@@ -5,19 +5,20 @@
 #![allow(non_snake_case)]
 use dioxus::prelude::*;
 
-pub fn Radio(cx: Scope) -> Element {
-    let state = use_state(&cx, || false);
+pub fn Radio() -> Element {
+    let mut state = use_signal(|| false);
 
-    cx.render(rsx!(input {
+    rsx!(
+      input {
         r#type: "radio",
         id: "radio-n",
         style: "width:1em; height:1em;",
-        onclick: move |_| state.set(!state),
+        onclick: move |_| state.toggle(),
       }
       label {
         style: "padding-left: 1rem",
         r#for: "radio-n",
         "Selected"
       }
-    ))
+    )
 }
