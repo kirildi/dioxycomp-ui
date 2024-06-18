@@ -5,20 +5,20 @@
 #![allow(non_snake_case)]
 use dioxus::prelude::*;
 
-pub fn Radio() -> Element {
-    let mut state = use_signal(|| false);
-
-    rsx!(
-      input {
-        r#type: "radio",
-        id: "radio-n",
-        style: "width:1em; height:1em;",
-        onclick: move |_| state.toggle(),
-      }
-      label {
-        style: "padding-left: 1rem",
-        r#for: "radio-n",
-        "Selected"
-      }
-    )
+#[component]
+pub fn Radio(
+    onclick: EventHandler<MouseEvent>,
+    id: Option<String>,
+    class_name: Option<String>,
+    styles: Option<String>,
+) -> Element {
+    rsx! {
+        input {
+            r#type: "radio",
+            id: id,
+            class: class_name,
+            style: styles,
+            onclick: move |event| onclick.call(event),
+        }
+    }
 }
