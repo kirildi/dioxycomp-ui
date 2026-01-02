@@ -14,9 +14,11 @@ pub fn Select() -> Element {
     rsx!(
       select {
         style: styles,
-        value: "{selected()}",
-        prevent_default: "onchange",
-        onchange: move |event| selected.set(event.value()),
+        value: selected(),
+        onchange: move |event| {
+          event.prevent_default();
+          selected.set(event.value()
+        )},
         option {
           value: "option 2",
           "option 1"
@@ -26,7 +28,7 @@ pub fn Select() -> Element {
           "option 2"
         },
         option {
-          id: "option 3",
+          value: "option 3",
           "option 3"
         }
     })

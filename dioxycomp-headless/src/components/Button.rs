@@ -30,7 +30,7 @@ pub fn Button(button_props: ButtonProps) -> Element {
             value: button_props.value,
             style:  button_props.styles,
             onclick: move |_| state.toggle(),
-            "{button_props.label.unwrap()}"
+            {button_props.label}
         }
     }
 }
