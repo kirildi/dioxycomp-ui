@@ -18,11 +18,23 @@ pub fn Select(
 
     rsx! {
       select {
-            value: "{selected()}",
-            prevent_default: "onchange",
-            style: styles,
-            onchange: move |event| selected.set(event.value()),
-            {children}
+        style: styles,
+        value: selected(),
+        onchange: move |event| {
+          event.prevent_default();
+          selected.set(event.value()
+        )},
+        option {
+          value: "option 2",
+          "option 1"
+        },
+        option {
+          value: "option 2",
+          "option 2"
+        },
+        option {
+          value: "option 3",
+          "option 3"
         }
     }
 }

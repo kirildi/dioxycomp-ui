@@ -23,15 +23,15 @@ pub fn Button(
     let setState = |mut st: Signal<bool>| st.toggle();
     rsx! {
         button {
-                id: id,
-                autofocus: autofocus,
-                disabled: disabled,
-                name: name,
-                r#type: r#type,
-                value: value,
-                style: styles,
-                onclick: move |event| onpress.call(event),
-                {children}
+            id: button_props.id,
+            autofocus:  button_props.autofocus,
+            disabled:  button_props.disabled,
+            name:  button_props.name,
+            r#type:  button_props.r#type,
+            value: button_props.value,
+            style:  button_props.styles,
+            onclick: move |_| state.toggle(),
+            {button_props.label}
         }
     }
 }
