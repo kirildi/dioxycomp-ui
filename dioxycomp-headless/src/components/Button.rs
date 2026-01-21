@@ -7,31 +7,43 @@
 use dioxus::prelude::*;
 use dioxus_elements::button;
 
-#[component]
+#[derive(Props, PartialEq, Clone)]
+pub struct ButtonProps {
+    pub id: Option<String>,
+    pub name: Option<String>,
+    pub r#type: Option<String>,
+    pub value: Option<String>,
+    pub autofocus: Option<bool>,
+    pub disabled: Option<bool>,
+    pub styles: Option<String>,
+    pub on_click: EventHandler<MouseEvent>,
+    pub children: Element,
+}
+
 pub fn Button(
-    onpress: EventHandler<MouseEvent>,
-    children: Element,
-    id: Option<String>,
-    styles: Option<String>,
-    name: Option<String>,
-    value: Option<String>,
-    disabled: Option<bool>,
-    r#type: Option<String>,
-    autofocus: Option<bool>,
+    ButtonProps {
+        id,
+        name,
+        r#type,
+        value,
+        styles,
+        disabled,
+        autofocus,
+        on_click,
+        children,
+    }: ButtonProps,
 ) -> Element {
-    let mut state = use_signal(|| false);
-    let setState = |mut st: Signal<bool>| st.toggle();
     rsx! {
         button {
-            id: button_props.id,
-            autofocus:  button_props.autofocus,
-            disabled:  button_props.disabled,
-            name:  button_props.name,
-            r#type:  button_props.r#type,
-            value: button_props.value,
-            style:  button_props.styles,
-            onclick: move |_| state.toggle(),
-            {button_props.label}
+            id: id,
+            name:  name,
+            r#type: r#type,
+            value: value,
+            style:  styles,
+            autofocus: autofocus,
+            disabled:  disabled,
+            onclick: move |event| on_click.call(event),
+            {children}
         }
     }
 }
