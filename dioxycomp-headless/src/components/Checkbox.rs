@@ -5,18 +5,31 @@
 #![allow(non_snake_case)]
 use dioxus::prelude::*;
 
-#[component]
+#[derive(Props, PartialEq, Clone)]
+
+pub struct CheckboxProps {
+    pub name: Option<String>,
+    pub class_name: Option<String>,
+    pub style: Option<String>,
+    pub on_click: EventHandler<MouseEvent>,
+    pub children: Element,
+}
+
 pub fn Checkbox(
-    onpress: EventHandler<MouseEvent>,
-    name: Option<String>,
-    class_name: Option<String>,
-    styles: Option<String>,
+    CheckboxProps {
+        name,
+        class_name,
+        style,
+        on_click,
+        children,
+    }: CheckboxProps,
 ) -> Element {
     rsx!(input {
         r#type: "checkbox",
         name: name,
         class: class_name,
-        style: styles,
-        onclick: move |event| onpress.call(event),
+        style: style,
+        onclick: move |event| on_click.call(event),
+        {children}
     },)
 }

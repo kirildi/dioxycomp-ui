@@ -4,7 +4,7 @@
 
 #![allow(non_snake_case)]
 #![allow(unused)]
-use dioxus::{html::label, prelude::*};
+use dioxus::prelude::*;
 
 #[derive(PartialEq, Props, Clone)]
 pub struct LabelProps {
@@ -12,19 +12,39 @@ pub struct LabelProps {
     pub r#for: Option<String>,
     pub value: Option<String>,
     pub class_name: Option<String>,
-    pub styles: Option<String>,
+    pub style: Option<String>,
+    pub children: Element,
 }
-pub fn Label(label_props: LabelProps) -> Element {
-    match label_props.id {
+
+pub fn Label(
+    LabelProps {
+        id,
+        r#for,
+        value,
+        class_name,
+        style,
+        children,
+    }: LabelProps,
+) -> Element {
+    match id {
         Some(_) => rsx! {
             label {
-                id: label_props.id,
-                r#for:  label_props.r#for,
-                class:  label_props.class_name,
-                style:  label_props.styles,
-                {label_props.value},
+                id: id,
+                r#for: r#for,
+                class: class_name,
+                style: style,
+                {value},
+                {children}
             },
         },
-        None => rsx! { label { "" } },
+        None => rsx! {
+            label {
+                r#for: r#for,
+                class: class_name,
+                style: style,
+                {value}
+                {children}
+            }
+        },
     }
 }
