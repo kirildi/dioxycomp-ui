@@ -5,20 +5,32 @@
 #![allow(non_snake_case)]
 use dioxus::prelude::*;
 
-#[component]
-pub fn Radio(
-    onclick: EventHandler<MouseEvent>,
+#[derive(Props, PartialEq, Clone)]
+pub struct RadioProps {
     id: Option<String>,
     class_name: Option<String>,
-    styles: Option<String>,
+    style: Option<String>,
+    on_click: EventHandler<MouseEvent>,
+    children: Element,
+}
+
+pub fn Radio(
+    RadioProps {
+        id,
+        class_name,
+        style,
+        on_click,
+        children,
+    }: RadioProps,
 ) -> Element {
     rsx! {
         input {
             r#type: "radio",
             id: id,
             class: class_name,
-            style: styles,
-            onclick: move |event| onclick.call(event),
+            style: style,
+            onclick: move |event| on_click.call(event),
+            {children}
         }
     }
 }
