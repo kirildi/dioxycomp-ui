@@ -37,6 +37,14 @@ pub fn Label(
                 {children}
             },
         },
-        None => rsx! { label { "" } },
+        None => rsx! {
+            label {
+                r#for: r#for,
+                class: class_name,
+                style: style,
+                {value}
+                {children}
+            }
+        },
     }
 }
