@@ -8,6 +8,7 @@ use dioxus::prelude::*;
 #[derive(Props, PartialEq, Clone)]
 
 pub struct CheckboxProps {
+    pub id: Option<String>,
     pub name: Option<String>,
     pub class_name: Option<String>,
     pub style: Option<String>,
@@ -17,6 +18,7 @@ pub struct CheckboxProps {
 
 pub fn Checkbox(
     CheckboxProps {
+        id,
         name,
         class_name,
         style,
@@ -25,6 +27,7 @@ pub fn Checkbox(
     }: CheckboxProps,
 ) -> Element {
     rsx!(input {
+        id: id,
         r#type: "checkbox",
         name: name,
         class: class_name,
