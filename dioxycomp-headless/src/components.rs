@@ -6,3 +6,4 @@ pub mod Label;
 pub mod Modal;
 pub mod Radio;
 pub mod Select;
+pub mod Slider;
